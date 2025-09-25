@@ -1,0 +1,173 @@
+/* Brand Colors */
+body {
+  background: #f4f8fb;
+  font-family: 'Avenir', 'Proxima Nova', Arial, sans-serif;
+  margin: 0; padding: 0; color: #222;
+}
+section {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(46,157,247,0.07);
+  margin: 24px 10px 20px 10px;
+  padding: 24px 16px;
+}
+.site-header {
+  width: 100%; height: 12vh; min-height: 60px; max-height: 120px;
+  background: #FFC907;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 32px; box-sizing: border-box;
+  font-family: inherit;
+}
+.header-logo { height: 40px; width: auto; display: block; }
+.header-left, .header-right { display: flex; align-items: center; }
+.login-button {
+  background: #FF902A; color: #fff; border: none; border-radius: 5px;
+  padding: 8px 20px; font-size: 1em; font-weight: bold; text-decoration: none;
+  cursor: pointer; transition: background 0.2s; margin-left: 12px;
+}
+.login-button:hover { background: #F5402C; }
+.hero {
+  position: relative;
+  background: url('https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?auto=format&fit=crop&w=1500&q=80') center/cover no-repeat;
+  color: #fff; text-align: left;
+  padding: 70px 0; border-radius: 0 0 16px 16px;
+  min-height: 340px; display: flex; align-items: center;
+}
+.hero-overlay {
+  position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(20,40,60,0.55);
+  border-radius: 0 0 16px 16px; z-index: 1; display: block;
+}
+.hero-content {
+  position: relative; z-index: 2; max-width: 600px;
+  margin-left: 40px; margin-right: 20px;
+}
+.hero-content h1 {
+  font-size: 2.6em; font-weight: bold; color: #fff;
+  margin: 0 0 18px 0; letter-spacing: 1px;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.18);
+}
+.hero-subtext {
+  font-size: 1.15em; color: #fff; margin: 0;
+  font-weight: normal; line-height: 1.5;
+  text-shadow: 0 1px 4px rgba(0,0,0,0.12);
+}
+.story { background: #8BD1CB; color: #222; text-align: center; padding: 30px 20px; }
+h2 { color: #2E9DF7; margin-top: 0; font-weight: bold; }
+.call-to-action {
+  background: #FFC907; color: #222; text-align: center; padding: 30px 20px;
+}
+.impact-image {
+  width: 100%; max-width: 320px; border-radius: 10px; margin-bottom: 16px;
+  box-shadow: 0 2px 8px rgba(46,157,247,0.10);
+}
+.donate-button {
+  display: inline-block; background: #4FCB53; color: #fff;
+  padding: 14px 32px; text-decoration: none; border-radius: 6px;
+  font-weight: bold; font-size: 1.1em; margin-top: 18px;
+  box-shadow: 0 2px 8px rgba(79,203,83,0.10);
+  transition: background 0.3s, transform 0.2s; border: none; cursor: pointer;
+}
+.donate-button:hover { background: #159A48; transform: translateY(-2px) scale(1.04); }
+
+/* Donation Callout Styles */
+/* This box overlaps the bottom of the hero/banner section */
+.donation-callout {
+  background: #fff;
+  box-shadow: 0 4px 16px rgba(46,157,247,0.12);
+  border-radius: 12px;
+  max-width: 700px;
+  margin: -60px auto 32px auto; /* Negative top margin to overlap hero */
+  padding: 24px 28px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  z-index: 10;
+  font-family: 'Avenir', 'Proxima Nova', Arial, sans-serif;
+}
+
+/* Donation text on the left */
+.donation-text {
+  font-size: 1.25em;
+  color: #222;
+  font-weight: bold;
+  flex: 1;
+}
+
+/* Bright yellow donate button on the right */
+.donation-btn {
+  background: #FFC907;
+  color: #222;
+  font-size: 1.2em;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  padding: 16px 38px;
+  text-decoration: none;
+  box-shadow: 0 2px 8px rgba(255,201,7,0.15);
+  margin-left: 28px;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+  font-family: inherit;
+  display: inline-block;
+}
+.donation-btn:hover {
+  background: #FFD84A;
+  transform: translateY(-2px) scale(1.04);
+}
+
+/* Responsive: stack text and button on small screens */
+@media (max-width: 600px) {
+  .donation-callout {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 16px 10px;
+    margin: -40px 8px 24px 8px;
+    text-align: center;
+  }
+  .donation-text {
+    margin-bottom: 16px;
+    font-size: 1.05em;
+  }
+  .donation-btn {
+    margin-left: 0;
+    width: 100%;
+    font-size: 1em;
+    padding: 14px 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero { padding: 32px 0; min-height: 180px; }
+  .hero-content { margin-left: 12px; margin-right: 8px; max-width: 98%; }
+  .hero-content h1 { font-size: 1.3em; }
+  .hero-subtext { font-size: 1em; }
+  .story, .call-to-action, .donation-section { padding: 14px 8px; }
+  .impact-content { display: block; text-align: center; }
+  .impact-image { width: 90%; max-width: 220px; }
+  .site-header { padding: 0 10px; height: 60px; min-height: 48px; }
+  .header-logo { height: 28px; }
+  .login-button { padding: 6px 12px; font-size: 0.95em; }
+}
+@media (min-width: 601px) {
+  .impact-content {
+    display: flex; align-items: center; justify-content: center;
+    gap: 28px; text-align: left; max-width: 800px; margin: 0 auto;
+  }
+  .impact-image { width: 300px; }
+}
+
+.header-icon {
+  height: 32px;
+  width: auto;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+.header-brand {
+  font-size: 1.35em;
+  font-weight: bold;
+  color: #222;
+  letter-spacing: 0.5px;
+  font-family: inherit;
+}
